@@ -1,17 +1,18 @@
-import localFont from "next/font/local";
-import "./globals.css";
-import Providers from "@/components/providers";
-import pkg from "../../package.json";
+import localFont from 'next/font/local';
+import './globals.css';
+import Providers from '@/components/providers';
+import pkg from '../../package.json';
+import BuildInfo from '@/components/build-info';
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 });
 
 export default function RootLayout({
@@ -53,6 +54,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers> {children}</Providers>
+        <BuildInfo />
       </body>
     </html>
   );

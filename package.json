@@ -5,7 +5,7 @@
     "name": "rirh<i@tigerzh.com>"
   },
   "license": "./LICENSE",
-  "version": "24.1207.2222",
+  "version": "24.1207.2239",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -34,6 +34,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dayjs": "^1.11.13",
     "eslint": "^8",
     "eslint-config-next": "15.0.4",
     "eslint-config-prettier": "^9.1.0",
