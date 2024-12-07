@@ -27,20 +27,12 @@ jobs:
           npm run build
 
           # 创建发布目录
-          mkdir -p release
-
-          # 复制 standalone 输出
-          cp -r .next/standalone/* release/
-          cp -r public release/
-          cp -r .next/static release/.next/
-
-          # 复制 package.json 和 next.config.js
-          cp package.json release/
-          cp next.config.ts release/
+          cp -r public .next/standalone/ 
+          cp -r .next/static .next/standalone/.next/
 
       - name: 压缩发布产物
         run: |
-          cd release
+          cd .next/standalone
           tar -czvf ../nextjs-standalone-release.tar.gz .
 
       - name: 创建 GitHub Release
