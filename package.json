@@ -1,7 +1,7 @@
 {
   "name": "react-nextjs-template",
   "description": "React NextJS Template",
-  "version": "0.1.0",
+  "version": "24.1207.2152",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -23,7 +23,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "^20",
