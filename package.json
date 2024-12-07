@@ -1,6 +1,10 @@
 {
   "name": "react-nextjs-template",
   "description": "React NextJS Template",
+  "author": {
+    "name": "rirh<i@tigerzh.com>"
+  },
+  "license": "./LICENSE",
   "version": "24.1207.2222",
   "private": true,
   "scripts": {
