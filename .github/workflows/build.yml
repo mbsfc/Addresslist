@@ -32,7 +32,7 @@ jobs:
       - name: 压缩发布产物
         run: |
           cd .next/standalone
-          tar -czvf ../nextjs-standalone-release.tar.gz .
+          tar -czvf ../../nextjs-standalone-release.tar.gz .
 
       - name: 创建 GitHub Release
         uses: softprops/action-gh-release@v2
