@@ -1,7 +1,7 @@
 {
   "name": "react-nextjs-template",
   "description": "React NextJS Template",
-  "version": "24.1207.2208",
+  "version": "24.1207.2218",
   "private": true,
   "scripts": {
     "dev": "next dev",

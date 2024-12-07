@@ -27,8 +27,7 @@ jobs:
           npm run build
 
           # 创建发布目录
-          cp -r public .next/standalone/ 
-          cp -r .next/static .next/standalone/.next/
+          cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/
 
       - name: 压缩发布产物
         run: |
