@@ -36,7 +36,7 @@ jobs:
 
           # 复制 package.json 和 next.config.js
           cp package.json release/
-          cp next.config.js release/
+          cp next.config.ts release/
 
       - name: 压缩发布产物
         run: |
