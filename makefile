@@ -1,5 +1,5 @@
 # 获取当前时间并格式化版本号
-VERSION := $(shell date +"%y.%m%d.%H%M")
+VERSION := $(shell TZ="Asia/Shanghai" date +"%y.%m%d.%H%M")
 
 
 update-version:
