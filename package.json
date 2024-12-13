@@ -1,11 +1,11 @@
 {
-  "name": "react-nextjs-template",
+  "name": "nextjs-ssr-template",
   "description": "React NextJS Template",
   "author": {
     "name": "rirh<i@tigerzh.com>"
   },
   "license": "./LICENSE",
-  "version": "24.1209.1539",
+  "version": "24.1213.1024",
   "private": true,
   "scripts": {
     "dev": "next dev",

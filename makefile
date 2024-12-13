@@ -20,3 +20,7 @@ push-tag: commit-version
 	@echo "Creating and pushing tag v$(VERSION)"
 	git tag v$(VERSION)
 	git push origin v$(VERSION)
+
+# 创建并推送标签
+dev: 
+	npm run dev

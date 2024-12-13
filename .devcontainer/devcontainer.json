@@ -1,26 +1,32 @@
 {
-    "name": "node:v22.9.0",
-    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-    "remoteUser": "root",
-    "mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,readonly"
-    ],
-    "remoteEnv": {
-        "SSH_AUTH_SOCK": "/ssh-agent"
-    },
-    "postCreateCommand": "curl -fsSL https://bun.sh/install | bash",
-    "initializeCommand": "mkdir -p ${localEnv:HOME}/.ssh",
-    "runArgs": [
-        "--volume=/run/host-services/ssh-auth.sock:/ssh-agent",
-        "--network=host"
-    ],
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "bradlc.vscode-tailwindcss",
-                "esbenp.prettier-vscode",
-                "esbenp.prettier-vscode"
-            ]
-        }
+  "name": "node:v22.9.0",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss", // Tailwind CSS 支持
+        "esbenp.prettier-vscode", // Prettier 格式化工具
+        "dbaeumer.vscode-eslint", // ESLint 支持
+        "ms-vscode.js-debug", // JavaScript/Node.js 调试
+        "yoavbls.pretty-ts-errors", // TypeScript 错误消息优化
+        "styled-components.vscode-styled-components" // styled-components 支持（可选）
+      ]
     }
+  },
+  "remoteUser": "node",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/node/.ssh,type=bind,readonly",
+    "source=/etc/localtime,target=/etc/localtime,type=bind",
+    "source=/etc/timezone,target=/etc/timezone,type=bind"
+  ],
+  "remoteEnv": {
+    "SSH_AUTH_SOCK": "/ssh-agent",
+    "TZ": "Asia/Shanghai"
+  },
+  "initializeCommand": "mkdir -p ${localEnv:HOME}/.ssh",
+  "runArgs": [
+    "--volume=/run/host-services/ssh-auth.sock:/ssh-agent",
+    "--network=host",
+    "--privileged"
+  ]
 }
