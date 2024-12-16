@@ -49,6 +49,7 @@ export default function RootLayout({
         />
         <title>{pkg.name}</title>
         <meta name="description" content={pkg.description} />
+        {/* <!--[if lt IE 11]><script>window.location.href='/ie.html';</script><![endif]--> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
