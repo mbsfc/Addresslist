@@ -3,7 +3,9 @@ import './globals.css';
 import Providers from '@/components/providers';
 import pkg from '../../package.json';
 import BuildInfo from '@/components/build-info';
-
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import { Toaster } from '@/components/ui/sonner';
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -49,13 +51,22 @@ export default function RootLayout({
         />
         <title>{pkg.name}</title>
         <meta name="description" content={pkg.description} />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossOrigin=""
+        />
         {/* <!--[if lt IE 11]><script>window.location.href='/ie.html';</script><![endif]--> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         <Providers> {children}</Providers>
         <BuildInfo />
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );
