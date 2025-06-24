@@ -49,7 +49,7 @@ export default function RootLayout({
           content="#000000"
           media="(prefers-color-scheme: dark)"
         />
-        <title>{pkg.name}</title>
+        <title>一个野生的地址生成器</title>
         <meta name="description" content={pkg.description} />
         <link
           rel="stylesheet"

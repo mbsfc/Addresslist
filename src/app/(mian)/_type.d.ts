@@ -10,6 +10,7 @@ export declare namespace IUser {
     address: Address;
     avatar: string;
     display_name: string;
+    ip?: string;
   };
   type getCoorAddressRequest = {
     lat: number;

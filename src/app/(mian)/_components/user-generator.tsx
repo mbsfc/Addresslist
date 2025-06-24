@@ -1,6 +1,6 @@
 'use client';
 import { useCallback, useRef } from 'react';
-import { MapPin, Mail, Lock, Shuffle, History } from 'lucide-react';
+import { MapPin, Mail, Lock, Shuffle, History, Share } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Avatar } from '@/components/ui/avatar';
 import { toast } from 'sonner';
@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import HistoryDrawer from './history-drawer';
 import { getPerson, getRandomCoor } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Badge } from '@/components/ui/badge';
 
 export default function UserGenerator() {
   const {
@@ -178,7 +179,7 @@ export default function UserGenerator() {
             </div>
 
             {/* 地址信息 */}
-            <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+            <div className="pt-2 border-t border-gray-200 dark:border-gray-700 relative">
               <Show
                 when={!loadingAddress}
                 fallback={
@@ -189,7 +190,7 @@ export default function UserGenerator() {
                 }
               >
                 <div
-                  className="flex items-start gap-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition-colors"
+                  className="flex items-start gap-2 rounded  dark:hover:bg-gray-800 cursor-pointer transition-colors"
                   title="点击复制完整地址"
                 >
                   <MapPin className="w-4 h-4 text-gray-400 mt-0.5" />
@@ -202,14 +203,14 @@ export default function UserGenerator() {
                     >
                       {userInfo?.display_name}
                     </div>
-                    <div className="text-xs text-gray-500 mt-1">
+                    <div className="text-xs text-gray-500 mt-1 flex gap-2">
                       <Show when={!!userInfo?.address.city}>
                         <span
                           onClick={() =>
                             copyToClipboard(userInfo?.address.city, '城市')
                           }
                         >
-                          {userInfo?.address.city} •
+                          城市:{userInfo?.address.city}
                         </span>
                       </Show>
                       <Show when={!!userInfo?.address.city}>
@@ -218,7 +219,7 @@ export default function UserGenerator() {
                             copyToClipboard(userInfo?.address.state, '州/省')
                           }
                         >
-                          {userInfo?.address.state} •
+                          省/州:{userInfo?.address.state}
                         </span>
                       </Show>
                       <Show when={!!userInfo?.address.zipcode}>
@@ -230,17 +231,53 @@ export default function UserGenerator() {
                             )
                           }
                         >
-                          {userInfo?.address.zipcode}
+                          邮政编码:{userInfo?.address.zipcode}
                         </span>
                       </Show>
                     </div>
                   </div>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    className=" absolute right-0 bottom-0"
+                  >
+                    <Share className="h-3 w-3" />
+                  </Button>
                 </div>
               </Show>
             </div>
           </div>
         </div>
       </Card>
+      <div>
+        {/* 热门快捷地区标签 */}
+
+        <div className="flex flex-wrap gap-2 my-2">
+          {[
+            { label: '美国', code: 'US' },
+            { label: '英国', code: 'GB' },
+            { label: '加拿大', code: 'CA' },
+            { label: '香港', code: 'HK' },
+            { label: '台湾', code: 'TW' },
+            { label: '日本', code: 'JP' },
+            { label: '新加坡', code: 'SG' },
+          ].map((item) => (
+            <Badge
+              key={item.code}
+              variant="secondary"
+              className="cursor-pointer"
+              onClick={() => {
+                setCountryCode(item.code);
+                const { coord } = getRandomCoor();
+                setCoord(coord);
+                setUser(getPerson(item.code));
+              }}
+            >
+              {item.label}
+            </Badge>
+          ))}
+        </div>
+      </div>
       <div className="flex items-center justify-between gap-2 my-2">
         <Button
           variant="outline"
@@ -259,9 +296,11 @@ export default function UserGenerator() {
           生成新地址
         </Button>
       </div>
-      <Alert className="mt-2 text-xs  border-none bg-gray-100  text-gray-500 dark:text-gray-400">
-        <span className="font-semibold">提示:</span>{' '}
-        点击任何信息可复制到剪贴板，头像可下载。点击地图任意点或生成新地址可重新生成信息
+      <Alert className="mt-2 text-xs  border-none bg-yellow-50  text-gray-500 dark:text-gray-400">
+        <span className="font-semibold">💡提示:</span>{' '}
+        <div>点击卡片信息可复制到剪贴板，头像可下载。</div>
+        <div>点击货搜索地图任意位置或生成新地址可重新生成用户信息</div>
+        <div></div>
       </Alert>
 
       {/* 历史记录抽屉 */}
