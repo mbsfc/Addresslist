@@ -16,7 +16,7 @@ function Footer() {
       data-map-control
     >
       <a
-        href="http://yesheng.de"
+        href="https://github.com/YeShengDe/AddressGeneratorFe"
         target="_blank"
         className=" mr-1"
         rel="noopener noreferrer"
