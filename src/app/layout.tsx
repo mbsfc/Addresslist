@@ -6,6 +6,8 @@ import BuildInfo from '@/components/build-info';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { Toaster } from '@/components/ui/sonner';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -72,6 +74,7 @@ export default function RootLayout({
         <BuildInfo />
         <Footer />
         <Toaster />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS_ID!} />
       </body>
     </html>
   );
