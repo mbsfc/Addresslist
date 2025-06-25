@@ -25,7 +25,7 @@
     "name": "i<i@github.com>"
   },
   "license": "./LICENSE",
-  "version": "25.0625.1816",
+  "version": "25.0625.1819",
   "private": true,
   "scripts": {
     "dev": "next dev",
