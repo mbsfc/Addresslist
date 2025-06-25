@@ -101,9 +101,31 @@ export default function MapLayerControl({
 
   return (
     <div
-      className="absolute bottom-[50px] right-4 z-[1000] flex flex-col gap-2 items-end"
+      className="absolute top-[70px] md:top-auto md:bottom-[50px] right-4 z-[1000] flex flex-col gap-2 items-end"
       data-map-control
     >
+      {/* 缩放控制器 */}
+      <Card className="p-1 w-[40px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border shadow-lg">
+        <div className="flex flex-col gap-1">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 w-8 p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={handleZoomIn}
+          >
+            <ZoomIn className="h-4 w-4" />
+          </Button>
+          <div className="w-full h-px bg-gray-200 dark:bg-gray-700" />
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-8 w-8 p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
+            onClick={handleZoomOut}
+          >
+            <ZoomOut className="h-4 w-4" />
+          </Button>
+        </div>
+      </Card>
       {/* 图层选择器 - 紧凑版 */}
       <div className="relative" ref={menuRef}>
         {/* 图层菜单 */}
@@ -155,28 +177,6 @@ export default function MapLayerControl({
           </Button>
         </Card>
       </div>
-      {/* 缩放控制器 */}
-      <Card className="p-1 w-[40px] bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border shadow-lg">
-        <div className="flex flex-col gap-1">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-8 w-8 p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
-            onClick={handleZoomIn}
-          >
-            <ZoomIn className="h-4 w-4" />
-          </Button>
-          <div className="w-full h-px bg-gray-200 dark:bg-gray-700" />
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-8 w-8 p-0 hover:bg-gray-100 dark:hover:bg-gray-800"
-            onClick={handleZoomOut}
-          >
-            <ZoomOut className="h-4 w-4" />
-          </Button>
-        </div>
-      </Card>
     </div>
   );
 }

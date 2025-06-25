@@ -82,7 +82,7 @@ export default function Page() {
 
   return (
     <Show when={!!coord[0]} fallback={<LogoPage />}>
-      <div className="w-full h-screen fixed top-0 left-0 z-10">
+      <div className="w-full h-[100dvh] max-h-screen fixed top-0 left-0 z-10">
         <div className="h-full overflow-hidden shadow-lg">
           <MapComponent lat={coord[0]} lon={coord[1]} />
         </div>

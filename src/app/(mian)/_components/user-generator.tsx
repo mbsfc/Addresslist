@@ -85,7 +85,7 @@ export default function UserGenerator() {
     });
   };
   return (
-    <div className="absolute bottom-4 left-1 md:bottom-4 md:left-4 z-[1000]  w-[calc(100%-0.5rem)] md:max-w-[400px] md:min-w-[200px] text-[13px]">
+    <div className="absolute bottom-8 left-1 md:bottom-4 md:left-4 z-[1000]  w-[calc(100%-0.5rem)] md:max-w-[400px] md:min-w-[200px] text-[13px]">
       <Card>
         <div className="p-3">
           <div className="space-y-2">
