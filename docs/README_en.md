@@ -56,15 +56,15 @@
 ## 🖼️ Screenshots
 
 <div align="center" style="margin-bottom: 1.5em;">
-  <img src="docs/pc.png" alt="PC UI" width="600" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
+  <img src="pc.png" alt="PC UI" width="600" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
   <div style="margin: 0.5em 0 1.5em 0; color: #888; font-size: 15px;">(1) Desktop UI</div>
 </div>
 <div align="center" style="margin-bottom: 1.5em;">
-  <img src="docs/phone.png" alt="Mobile UI" width="300" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
+  <img src="phone.png" alt="Mobile UI" width="300" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
   <div style="margin: 0.5em 0 1.5em 0; color: #888; font-size: 15px;">(2) Mobile UI</div>
 </div>
 <div align="center" style="margin-bottom: 1.5em;">
-  <img src="docs/share.png" alt="Share UI" width="400" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
+  <img src="share.png" alt="Share UI" width="400" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
   <div style="margin: 0.5em 0 1.5em 0; color: #888; font-size: 15px;">(3) Share Page</div>
 </div>
 
