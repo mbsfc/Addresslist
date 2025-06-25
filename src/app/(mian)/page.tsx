@@ -71,7 +71,8 @@ export default function Page() {
           country: osm.address.country ?? user.address.country,
           country_code: osm.address.country_code ?? user.address.country_code,
           state: osm.address.state ?? user.address.state,
-          zipcode: osm?.address?.postcode ?? user.address.zipcode,
+          zipcode:
+            (osm?.address && osm?.address?.postcode) ?? user.address.zipcode,
         },
       });
     }
