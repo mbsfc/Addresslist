@@ -49,7 +49,7 @@
     - **构建命令 / Build command**: `pnpm run build`
     - **构建输出目录 / Build output directory**: `dist`
 
-    #### **环境变量 (重要) / Environment variables (Important)**
+    #### **环境变量 (不是必须 不设置可以流畅运行) / Environment variables **
 
     向下滚动到环境变量部分，点击 **添加变量 (Add variable)**，然后设置：
     - **变量名称 / Variable name**: `NEXT_PUBLIC_ANALYTICS_ID`
