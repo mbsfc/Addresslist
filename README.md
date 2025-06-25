@@ -14,7 +14,8 @@
   <img src="https://img.shields.io/badge/Prettier-code_style-F7B93E?logo=prettier&logoColor=black" alt="Prettier" />
   <img src="https://img.shields.io/badge/OpenStreetMap-7EBC6F?logo=openstreetmap&logoColor=white" alt="OpenStreetMap" />
 </p>
-中文  |  [English](https://github.com/YeShengDe/AddressGeneratorFe/blob/main/docs/README_en.md)
+
+中文 | [English](https://github.com/YeShengDe/AddressGeneratorFe/blob/main/docs/README_en.md)
 
 ## ✨ 功能特性
 
