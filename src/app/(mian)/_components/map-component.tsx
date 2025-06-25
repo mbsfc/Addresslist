@@ -131,7 +131,7 @@ export default function MapComponent({
         <MapClickHandler />
 
         <TileLayer
-          key={currentLayer.id} // 添加 key 确保图层正确切换
+          key={`${currentLayer.id}-${Date.now()}`} // 添加 key 确保图层正确切换
           attribution={currentLayer.attribution}
           url={currentLayer.url}
         />
@@ -139,7 +139,7 @@ export default function MapComponent({
         {/* 如果有标注层，则添加标注层 */}
         {currentLayer.hasLabels && currentLayer.labelsUrl && (
           <TileLayer
-            key={`${currentLayer.id}-labels`}
+            key={`${currentLayer.id}-labels-${Date.now()}`}
             url={currentLayer.labelsUrl}
             attribution=""
           />

@@ -1,11 +1,9 @@
 'use client';
-import { useCallback, useRef } from 'react';
 import { MapPin, Mail, Lock, Shuffle, History, Share } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Avatar } from '@/components/ui/avatar';
 import { toast } from 'sonner';
 import { useStore } from '../_store';
-import { Alert } from '@/components/ui/alert';
 import NiceAvatar, { genConfig } from 'react-nice-avatar';
 import Show from '@/components/show';
 import { Button } from '@/components/ui/button';
@@ -13,6 +11,10 @@ import HistoryDrawer from './history-drawer';
 import { getPerson, getRandomCoor } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
+import { MapAlert } from './map-tips';
+import { saveAs } from 'file-saver';
+import { toBlob } from 'html-to-image';
+import ShareUserDialog from './share-user';
 
 export default function UserGenerator() {
   const {
@@ -24,7 +26,8 @@ export default function UserGenerator() {
     setCountryCode,
   } = useStore();
   // 生成新地址
-  const handleGenerateNewAddress = useCallback(() => {
+  const avatarId = 'yeshengde-user-avatar';
+  const handleGenerateNewAddress = () => {
     // const newUser = getPerson()
     // setUser(newUser)
     const { coord, country_code } = getRandomCoor();
@@ -32,82 +35,57 @@ export default function UserGenerator() {
     setCountryCode(country_code);
     const newUser = getPerson(country_code ?? '');
     setUser(newUser);
-  }, [setUser]);
+  };
 
   // 打开历史记录
-  const handleOpenHistory = useCallback(() => {
+  const handleOpenHistory = () => {
     setHistoryDrawerOpen(true);
-  }, [setHistoryDrawerOpen]);
+  };
+
   // 复制到剪贴板
-  const copyToClipboard = useCallback(
-    async (text: string | null | undefined, label: string) => {
-      try {
-        if (!text) return;
-        await navigator.clipboard.writeText(text || '');
-        toast.success(`已复制${label}`, {
-          description: text,
-          duration: 2000,
-          position: 'top-right',
-        });
-      } catch (err) {
-        console.error('复制失败:', err);
-        toast.error('复制失败');
-      }
-    },
-    []
-  );
-  const avatarRef = useRef<HTMLDivElement>(null);
-  const handleDownloadAvatar = async () => {
-    const svg = avatarRef.current?.querySelector('svg');
-    if (!svg) return;
-
-    // 显示加载提示
-    const loadingToast = toast.loading('正在下载头像...', {
-      position: 'top-right',
-    });
-
+  const copyToClipboard = async (
+    text: string | null | undefined,
+    label: string
+  ) => {
     try {
-      // 将SVG转换为字符串
-      const svgData = new XMLSerializer().serializeToString(svg);
-
-      // 创建SVG Blob
-      const svgBlob = new Blob([svgData], {
-        type: 'image/svg+xml;charset=utf-8',
-      });
-      const svgUrl = URL.createObjectURL(svgBlob);
-
-      // 创建下载链接
-      const link = document.createElement('a');
-      link.href = svgUrl;
-      link.download = `${userInfo?.firstname}_${userInfo?.lastname}_avatar.svg`;
-      link.style.display = 'none';
-
-      // 触发下载
-      document.body.appendChild(link);
-      link.click();
-
-      // 清理资源
-      document.body.removeChild(link);
-      URL.revokeObjectURL(svgUrl);
-
-      // 关闭加载提示并显示成功消息
-      toast.dismiss(loadingToast);
-      toast.success('头像已下载为SVG格式', {
+      if (!text) return;
+      await navigator.clipboard.writeText(text || '');
+      toast.success(`已复制${label}`, {
+        description: text,
         duration: 2000,
         position: 'top-right',
       });
-    } catch (error) {
-      console.error('下载头像失败:', error);
-      toast.dismiss(loadingToast);
-
-      toast.error('下载失败，请重试', {
-        duration: 3000,
-        position: 'top-right',
-      });
+    } catch (err) {
+      console.error('复制失败:', err);
+      toast.error('复制失败');
     }
   };
+  const handleDownloadAvatar = async () => {
+    const scale = 2;
+    const node = document.getElementById(avatarId);
+    if (!node) return;
+    const loadingToast = toast.loading('正在下载头像...', {
+      position: 'top-right',
+    });
+    const blob = await toBlob(node, {
+      height: node.offsetHeight * scale,
+      style: {
+        transform: `scale(${scale}) translate(${node.offsetWidth / 2 / scale}px, ${node.offsetHeight / 2 / scale}px)`,
+        borderRadius: '0',
+        opacity: '1',
+      },
+      width: node.offsetWidth * scale,
+    });
+    const name = `${userInfo?.firstname}_${userInfo?.lastname}_avatar.png`;
+    if (blob) saveAs(blob, name);
+    toast.dismiss(loadingToast);
+    toast.success('头像已下载为 PNG', {
+      position: 'top-right',
+      duration: 2000,
+    });
+  };
   return (
-    <div className="absolute bottom-4 left-4 z-[1000]  max-w-[400px] min-w-[200px] text-[13px]">
+    <div className="absolute bottom-4 left-1 md:bottom-4 md:left-4 z-[1000]  w-[calc(100%-0.5rem)] md:max-w-[400px] md:min-w-[200px] text-[13px]">
       <Card>
         <div className="p-3">
           <div className="space-y-2">
@@ -124,11 +102,14 @@ export default function UserGenerator() {
                   }
                   title="点击复制姓名"
                 >
-                  {userInfo?.firstname} {userInfo?.lastname}
+                  <span className="underline-hover">
+                    {' '}
+                    {userInfo?.firstname} {userInfo?.lastname}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2   dark:text-gray-400">
                   <span
-                    className="cursor-pointer  transition-colors"
+                    className="cursor-pointer  transition-colors underline-hover"
                     onClick={() =>
                       copyToClipboard(userInfo?.birthday || '', '生日')
                     }
@@ -141,11 +122,11 @@ export default function UserGenerator() {
                   onClick={() => copyToClipboard(userInfo?.phone, '电话号码')}
                   className="flex items-center gap-2  dark:text-gray-400"
                 >
-                  <span className="">{userInfo?.phone}</span>
+                  <span className="underline-hover">{userInfo?.phone}</span>
                 </div>
               </div>
               <Avatar
-                ref={avatarRef}
+                id={avatarId}
                 onClick={handleDownloadAvatar}
                 className="w-[80px] h-[80px] border-border  shadow-md cursor-pointer hover:opacity-80 transition-opacity rounded-[20%]"
               >
@@ -165,7 +146,7 @@ export default function UserGenerator() {
                 title="点击复制邮箱"
               >
                 <Mail className="w-4 h-4 text-gray-400" />
-                <span className="">{userInfo?.email}</span>
+                <span className="underline-hover">{userInfo?.email}</span>
               </div>
 
               <div
@@ -174,7 +155,7 @@ export default function UserGenerator() {
                 title="点击复制邮箱密码"
               >
                 <Lock className="w-4 h-4 text-gray-400" />
-                <span className="">{userInfo?.password}</span>
+                <span className="underline-hover">{userInfo?.password}</span>
               </div>
             </div>
 
@@ -189,32 +170,24 @@ export default function UserGenerator() {
                   </div>
                 }
               >
-                <div
-                  className="flex items-start gap-2 rounded  dark:hover:bg-gray-800 cursor-pointer transition-colors"
-                  title="点击复制完整地址"
-                >
+                <div className="flex items-start gap-2 rounded  dark:hover:bg-gray-800 cursor-pointer transition-colors">
                   <MapPin className="w-4 h-4 text-gray-400 mt-0.5" />
                   <div className="flex-1 min-w-0">
-                    <div
+                    <span
                       onClick={() =>
                         copyToClipboard(userInfo?.display_name, '完整地址')
                       }
-                      className=""
+                      title="点击复制完整地址"
+                      className="underline-hover"
                     >
-                      {userInfo?.display_name}
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1 flex gap-2">
+                      {userInfo?.address.country},{userInfo?.address.state},
+                      {userInfo?.address.city},{userInfo?.address.streetName},
+                      {userInfo?.address.buildingNumber}
+                    </span>
+                    <div className="text-xs text-gray-500 mt-1 flex gap-2 flex-wrap">
                       <Show when={!!userInfo?.address.city}>
                         <span
-                          onClick={() =>
-                            copyToClipboard(userInfo?.address.city, '城市')
-                          }
-                        >
-                          城市:{userInfo?.address.city}
-                        </span>
-                      </Show>
-                      <Show when={!!userInfo?.address.city}>
-                        <span
+                          className="underline-hover"
                           onClick={() =>
                             copyToClipboard(userInfo?.address.state, '州/省')
                           }
@@ -222,8 +195,20 @@ export default function UserGenerator() {
                           省/州:{userInfo?.address.state}
                         </span>
                       </Show>
+                      <Show when={!!userInfo?.address.city}>
+                        <span
+                          title="点击复制城市"
+                          className="underline-hover"
+                          onClick={() =>
+                            copyToClipboard(userInfo?.address.city, '城市')
+                          }
+                        >
+                          城市:{userInfo?.address.city}
+                        </span>
+                      </Show>
                       <Show when={!!userInfo?.address.zipcode}>
                         <span
+                          className="underline-hover"
                           onClick={() =>
                             copyToClipboard(
                               userInfo?.address.zipcode,
@@ -231,53 +216,26 @@ export default function UserGenerator() {
                             )
                           }
                         >
-                          邮政编码:{userInfo?.address.zipcode}
+                          邮编:{userInfo?.address.zipcode}
                         </span>
                       </Show>
                     </div>
                   </div>
-                  <Button
-                    variant="secondary"
-                    size="sm"
-                    className=" absolute right-0 bottom-0"
-                  >
-                    <Share className="h-3 w-3" />
-                  </Button>
+                  <ShareUserDialog>
+                    <Badge
+                      variant="secondary"
+                      className=" absolute right-0 bottom-0"
+                    >
+                      <Share className="h-3 w-3" />
+                    </Badge>
+                  </ShareUserDialog>
                 </div>
               </Show>
             </div>
           </div>
         </div>
       </Card>
-      <div>
-        {/* 热门快捷地区标签 */}
 
-        <div className="flex flex-wrap gap-2 my-2">
-          {[
-            { label: '美国', code: 'US' },
-            { label: '英国', code: 'GB' },
-            { label: '加拿大', code: 'CA' },
-            { label: '香港', code: 'HK' },
-            { label: '台湾', code: 'TW' },
-            { label: '日本', code: 'JP' },
-            { label: '新加坡', code: 'SG' },
-          ].map((item) => (
-            <Badge
-              key={item.code}
-              variant="secondary"
-              className="cursor-pointer"
-              onClick={() => {
-                setCountryCode(item.code);
-                const { coord } = getRandomCoor();
-                setCoord(coord);
-                setUser(getPerson(item.code));
-              }}
-            >
-              {item.label}
-            </Badge>
-          ))}
-        </div>
-      </div>
       <div className="flex items-center justify-between gap-2 my-2">
         <Button
           variant="outline"
@@ -296,12 +254,35 @@ export default function UserGenerator() {
           生成新地址
         </Button>
       </div>
-      <Alert className="mt-2 text-xs  border-none bg-yellow-50  text-gray-500 dark:text-gray-400">
-        <span className="font-semibold">💡提示:</span>{' '}
-        <div>点击卡片信息可复制到剪贴板，头像可下载。</div>
-        <div>点击货搜索地图任意位置或生成新地址可重新生成用户信息</div>
-        <div></div>
-      </Alert>
+      <div>
+        {/* 热门快捷地区标签 */}
+
+        <div className="flex flex-wrap gap-2 my-2">
+          {[
+            { label: '🇺🇸美国', code: 'US' },
+            { label: '🇨🇦加拿大', code: 'CA' },
+            { label: '🇭🇰香港', code: 'HK' },
+            { label: '🇯🇵日本', code: 'JP' },
+            { label: '🇸🇬新加坡', code: 'SG' },
+          ].map((item) => (
+            <Badge
+              key={item.code}
+              variant="secondary"
+              className="cursor-pointer"
+              title={`点击生成${item.label}地址`}
+              onClick={() => {
+                setCountryCode(item.code);
+                const { coord } = getRandomCoor(item.code);
+                setCoord(coord);
+                setUser(getPerson(item.code));
+              }}
+            >
+              {item.label}
+            </Badge>
+          ))}
+        </div>
+      </div>
+      <MapAlert />
 
       {/* 历史记录抽屉 */}
       <HistoryDrawer />

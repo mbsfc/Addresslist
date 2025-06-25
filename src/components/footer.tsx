@@ -12,24 +12,24 @@ function Footer() {
   }, []);
   return (
     <footer
-      className="text-[10px] z-[900] bg-[rgba(0,0,0,.6)] fixed bottom-0 right-0 px-4  text-white  rounded-tl-lg flex justify-center items-center pt-[3px]"
+      className="md:w-auto w-full rounded-none md:rounded-tl-lg  text-[10px] z-[900] bg-[rgba(0,0,0,.6)] fixed bottom-0 right-0 px-4  text-white  flex justify-center items-center pt-[3px]"
       data-map-control
     >
       <a
         href="http://yesheng.de"
         target="_blank"
-        className="hover:underline mr-1"
+        className=" mr-1"
         rel="noopener noreferrer"
       >
-        Github
+        <span className="underline-hover">Github</span>
       </a>
       <a
         href="http://yesheng.de"
         target="_blank"
-        className="hover:underline mr-1"
+        className=" mr-1"
         rel="noopener noreferrer"
       >
-        野生的恐龙
+        <span className="underline-hover">野生的恐龙</span>
       </a>
       <div className=" h-full flex justify-center items-center ">
         © 2023 - {dayjs().format('YYYY')} {hostname} All rights reserved.

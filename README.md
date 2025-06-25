@@ -1,6 +1,15 @@
-# 地址生成器 - Address Generator
+# 一个野生的地址生成器
 
-一个基于 Next.js 的真实地址生成器，支持美国和加拿大，生成包含个人信息和地理位置的真实地址数据。
+<p align="left">
+  <img src="https://img.shields.io/badge/Next.js-15-000?logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/shadcn/ui-%23000000.svg?style=flat&logo=vercel&logoColor=white" alt="shadcn/ui" />
+  <img src="https://img.shields.io/badge/Zustand-000?logo=react&logoColor=white" alt="Zustand" />
+  <img src="https://img.shields.io/badge/Lucide_React-FACC15?logo=lucide&logoColor=black" alt="Lucide" />
+  <img src="https://img.shields.io/badge/OpenStreetMap-7EBC6F?logo=openstreetmap&logoColor=white" alt="OpenStreetMap" />
+  <img src="https://img.shields.io/badge/Faker_API-FF5722?logo=json&logoColor=white" alt="Faker API" />
+</p>
 
 ## ✨ 功能特性
 
@@ -13,17 +22,38 @@
 - 🎨 **现代化 UI**：采用 shadcn/ui 组件库，响应式设计
 - ⚡ **SSR 支持**：服务端渲染，首屏加载快
 
-## 🛠️ 技术栈
+---
 
-- **框架**：Next.js 15 (App Router)
-- **语言**：TypeScript
-- **样式**：Tailwind CSS
-- **UI 组件**：shadcn/ui
-- **状态管理**：Zustand
-- **图标**：Lucide React
-- **数据源**：OpenStreetMap API、FakerAPI
+## 🚀 部署方法（推荐 Cloudflare Pages）
 
-## 🚀 快速开始
+### Cloudflare Pages 一键部署
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/YeShengDe/AddressGeneratorFe)
+
+### Vercel 部署
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YeShengDe/AddressGeneratorFe)
+
+---
+
+## 🖼️ 截图
+
+<div align="center" style="margin-bottom: 1.5em;">
+  <img src="docs/pc.png" alt="PC界面" width="600" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
+  <div style="margin: 0.5em 0 1.5em 0; color: #888; font-size: 15px;">（1）PC 页面</div>
+</div>
+<div align="center" style="margin-bottom: 1.5em;">
+  <img src="docs/phone.png" alt="移动端界面" width="300" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
+  <div style="margin: 0.5em 0 1.5em 0; color: #888; font-size: 15px;">（2）移动端页面</div>
+</div>
+<div align="center" style="margin-bottom: 1.5em;">
+  <img src="docs/share.png" alt="分享界面" width="400" style="box-shadow:0 4px 24px rgba(0,0,0,0.15);border-radius:10px;" />
+  <div style="margin: 0.5em 0 1.5em 0; color: #888; font-size: 15px;">（3）分享页面</div>
+</div>
+
+---
+
+## 🛠️ 本地开发
 
 ### 环境要求
 
@@ -57,74 +87,7 @@ pnpm build
 pnpm start
 ```
 
-## 📁 项目结构
-
-```
-├── src/
-│   ├── app/
-│   │   ├── (main)/                    # 主页面组
-│   │   │   ├── _components/           # 页面组件
-│   │   │   │   └── address-generator.tsx
-│   │   │   ├── _type.d.ts            # 类型定义
-│   │   │   └── page.tsx              # 主页面 (SSR)
-│   │   ├── api/                      # API路由
-│   │   │   ├── generate/             # 地址生成API
-│   │   │   └── states/               # 州/省列表API
-│   │   ├── globals.css               # 全局样式
-│   │   └── layout.tsx                # 根布局
-│   ├── components/
-│   │   └── ui/                       # shadcn/ui 组件
-│   ├── lib/
-│   │   └── utils.ts                  # 工具函数
-│   └── types/                        # 全局类型定义
-├── public/                           # 静态资源
-├── .env.local                        # 环境变量
-└── README.md
-```
-
-## 🔧 API 端点
-
-### `GET /api/generate`
-
-生成新的地址信息。
-
-**查询参数:**
-
-- `state` (可选): 指定州/省代码 (如: CA, NY, ON)
-
-**响应示例:**
-
-```json
-{
-  "name": "John Smith",
-  "gender": "Male",
-  "phone": "(555) 123-4567",
-  "email": "john.smith@example.com",
-  "password": "SecurePass123!",
-  "address": "123 Main St, Los Angeles, CA 90210, United States",
-  "city": "Los Angeles",
-  "state": "CA",
-  "zip": "90210",
-  "country": "US"
-}
-```
-
-### `GET /api/states`
-
-获取所有支持的州/省列表。
-
-**响应示例:**
-
-```json
-[
-  {
-    "full": "加利福尼亚州",
-    "abbr": "CA",
-    "country": "US",
-    "en": "California"
-  }
-]
-```
+---
 
 ## 🎯 使用说明
 
@@ -134,36 +97,7 @@ pnpm start
 4. **查看地图**: 在地图面板中查看地址的实际位置
 5. **历史记录**: 从历史面板中快速恢复之前生成的数据
 
-## 🌐 部署
-
-### Vercel (推荐)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YeShengDe/AddressGeneratorFe)
-
-### Cloudflare Pages
-
-[![Deploy to Cloudflare Pages](https://deploy.cloudflare.com/button)](https://deploy.cloudflare.com/?repository=https://github.com/YeShengDe/AddressGeneratorFe)
-
-。
-
-### 其他平台
-
-项目支持部署到任何支持 Next.js 的平台:
-
-- Netlify
-- Railway
-- Render
-- Docker
-
-## 📝 环境变量
-
-创建 `.env.local` 文件:
-
-```env
-NEXT_PUBLIC_BASE_URL=http://localhost:3000
-```
-
-生产环境记得更新为实际域名。
+---
 
 ## 🤝 贡献
 

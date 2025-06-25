@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
 };
 if (process.env.NODE_ENV === 'production') {
   nextConfig.output = 'export';
+  nextConfig.distDir = 'dist';
 }
 
 export default nextConfig;

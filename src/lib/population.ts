@@ -12,7 +12,7 @@ export const populationCenters: PopulationCenter[] = [
   // 中国 - 扩展更多城市，缩小范围
   {
     origin: [39.904202, 116.407394],
-    radius: 35,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -21,7 +21,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [31.230416, 121.473701],
-    radius: 35,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -30,7 +30,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [23.129112, 113.264385],
-    radius: 30,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -39,7 +39,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [22.543097, 114.057868],
-    radius: 30,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -48,7 +48,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [30.572269, 104.066541],
-    radius: 30,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -57,7 +57,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [29.563009, 106.551557],
-    radius: 25,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -66,7 +66,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [30.294218, 120.161823],
-    radius: 25,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -75,7 +75,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [32.059344, 118.796877],
-    radius: 25,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -84,7 +84,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [38.047474, 114.514793],
-    radius: 25,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -93,7 +93,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [36.651216, 117.120008],
-    radius: 25,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -102,7 +102,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [34.267225, 108.954347],
-    radius: 25,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -111,7 +111,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [22.396428, 114.109497],
-    radius: 15,
+    radius: 10,
     locale: 'zh_CN',
     country: 'China',
     countryCode: 'CN',
@@ -122,7 +122,7 @@ export const populationCenters: PopulationCenter[] = [
   // 香港
   {
     origin: [22.3193, 114.1694],
-    radius: 20,
+    radius: 10,
     locale: 'en_HK',
     country: 'Hong Kong',
     countryCode: 'HK',
@@ -131,7 +131,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [22.2794, 114.1617],
-    radius: 15,
+    radius: 10,
     locale: 'en_HK',
     country: 'Hong Kong',
     countryCode: 'HK',
@@ -142,7 +142,7 @@ export const populationCenters: PopulationCenter[] = [
   // 台湾
   {
     origin: [25.033964, 121.564468],
-    radius: 25,
+    radius: 10,
     locale: 'zh_TW',
     country: 'Taiwan',
     countryCode: 'TW',
@@ -151,7 +151,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [24.147735, 120.673648],
-    radius: 20,
+    radius: 10,
     locale: 'zh_TW',
     country: 'Taiwan',
     countryCode: 'TW',
@@ -160,7 +160,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [22.627278, 120.301435],
-    radius: 15,
+    radius: 10,
     locale: 'zh_TW',
     country: 'Taiwan',
     countryCode: 'TW',
@@ -169,7 +169,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [24.806738, 120.97157],
-    radius: 15,
+    radius: 10,
     locale: 'zh_TW',
     country: 'Taiwan',
     countryCode: 'TW',
@@ -180,7 +180,7 @@ export const populationCenters: PopulationCenter[] = [
   // 日本 - 扩展更多城市
   {
     origin: [35.689487, 139.691711],
-    radius: 35,
+    radius: 10,
     locale: 'ja',
     country: 'Japan',
     countryCode: 'JP',
@@ -189,7 +189,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [34.693725, 135.502254],
-    radius: 30,
+    radius: 10,
     locale: 'ja',
     country: 'Japan',
     countryCode: 'JP',
@@ -198,7 +198,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [35.011636, 135.768029],
-    radius: 25,
+    radius: 10,
     locale: 'ja',
     country: 'Japan',
     countryCode: 'JP',
@@ -207,7 +207,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [43.066742, 141.350755],
-    radius: 25,
+    radius: 10,
     locale: 'ja',
     country: 'Japan',
     countryCode: 'JP',
@@ -216,7 +216,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [33.590353, 130.401715],
-    radius: 20,
+    radius: 10,
     locale: 'ja',
     country: 'Japan',
     countryCode: 'JP',
@@ -225,7 +225,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [35.443707, 139.638031],
-    radius: 20,
+    radius: 10,
     locale: 'ja',
     country: 'Japan',
     countryCode: 'JP',
@@ -234,7 +234,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [35.181446, 136.906398],
-    radius: 20,
+    radius: 10,
     locale: 'ja',
     country: 'Japan',
     countryCode: 'JP',
@@ -245,7 +245,7 @@ export const populationCenters: PopulationCenter[] = [
   // 韩国
   {
     origin: [37.566535, 126.977969],
-    radius: 30,
+    radius: 10,
     locale: 'ko',
     country: 'South Korea',
     countryCode: 'KR',
@@ -254,7 +254,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [35.179554, 129.075641],
-    radius: 25,
+    radius: 10,
     locale: 'ko',
     country: 'South Korea',
     countryCode: 'KR',
@@ -263,7 +263,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [37.4563, 126.7052],
-    radius: 20,
+    radius: 10,
     locale: 'ko',
     country: 'South Korea',
     countryCode: 'KR',
@@ -272,7 +272,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [35.8714, 128.6014],
-    radius: 20,
+    radius: 10,
     locale: 'ko',
     country: 'South Korea',
     countryCode: 'KR',
@@ -283,7 +283,7 @@ export const populationCenters: PopulationCenter[] = [
   // 美国 - 保持现有，缩小范围
   {
     origin: [40.712776, -74.005974],
-    radius: 35,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -292,7 +292,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [34.052235, -118.243683],
-    radius: 35,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -301,7 +301,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [41.878113, -87.629799],
-    radius: 30,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -310,7 +310,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [29.760427, -95.369804],
-    radius: 30,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -319,7 +319,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [37.774929, -122.419418],
-    radius: 30,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -328,7 +328,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [47.606209, -122.332069],
-    radius: 25,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -337,7 +337,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [33.448376, -112.074036],
-    radius: 25,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -346,7 +346,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [32.715738, -117.161084],
-    radius: 20,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -355,7 +355,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [42.360082, -71.05888],
-    radius: 20,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -364,7 +364,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [25.761681, -80.191788],
-    radius: 30,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -373,7 +373,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [36.169941, -115.13983],
-    radius: 25,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -382,7 +382,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [45.51223, -122.658722],
-    radius: 25,
+    radius: 10,
     locale: 'en_US',
     country: 'United States',
     countryCode: 'US',
@@ -393,7 +393,7 @@ export const populationCenters: PopulationCenter[] = [
   // 加拿大 - 缩小范围
   {
     origin: [43.65107, -79.347015],
-    radius: 30,
+    radius: 10,
     locale: 'en_CA',
     country: 'Canada',
     countryCode: 'CA',
@@ -402,7 +402,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [45.501689, -73.567256],
-    radius: 30,
+    radius: 10,
     locale: 'fr_CA',
     country: 'Canada',
     countryCode: 'CA',
@@ -411,7 +411,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [49.282729, -123.120738],
-    radius: 30,
+    radius: 10,
     locale: 'en_CA',
     country: 'Canada',
     countryCode: 'CA',
@@ -420,7 +420,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [51.044734, -114.071883],
-    radius: 25,
+    radius: 10,
     locale: 'en_CA',
     country: 'Canada',
     countryCode: 'CA',
@@ -429,7 +429,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [46.813878, -71.207981],
-    radius: 20,
+    radius: 10,
     locale: 'fr_CA',
     country: 'Canada',
     countryCode: 'CA',
@@ -438,7 +438,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [45.42153, -75.697193],
-    radius: 25,
+    radius: 10,
     locale: 'en_CA',
     country: 'Canada',
     countryCode: 'CA',
@@ -449,7 +449,7 @@ export const populationCenters: PopulationCenter[] = [
   // 澳大利亚 - 缩小范围
   {
     origin: [-33.86882, 151.209296],
-    radius: 30,
+    radius: 10,
     locale: 'en_AU',
     country: 'Australia',
     countryCode: 'AU',
@@ -458,7 +458,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-37.813629, 144.963058],
-    radius: 35,
+    radius: 10,
     locale: 'en_AU',
     country: 'Australia',
     countryCode: 'AU',
@@ -467,7 +467,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-27.46977, 153.025131],
-    radius: 30,
+    radius: 10,
     locale: 'en_AU',
     country: 'Australia',
     countryCode: 'AU',
@@ -476,7 +476,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-31.950527, 115.860457],
-    radius: 25,
+    radius: 10,
     locale: 'en_AU',
     country: 'Australia',
     countryCode: 'AU',
@@ -485,7 +485,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-34.928497, 138.600739],
-    radius: 20,
+    radius: 10,
     locale: 'en_AU',
     country: 'Australia',
     countryCode: 'AU',
@@ -496,7 +496,7 @@ export const populationCenters: PopulationCenter[] = [
   // 新加坡
   {
     origin: [1.352083, 103.819836],
-    radius: 15,
+    radius: 10,
     locale: 'en_US',
     country: 'Singapore',
     countryCode: 'SG',
@@ -507,7 +507,7 @@ export const populationCenters: PopulationCenter[] = [
   // 英国 - 缩小范围，增加城市
   {
     origin: [51.507351, -0.127758],
-    radius: 35,
+    radius: 10,
     locale: 'en_GB',
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -516,7 +516,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [53.480759, -2.242631],
-    radius: 25,
+    radius: 10,
     locale: 'en_GB',
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -525,7 +525,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [52.486244, -1.890401],
-    radius: 25,
+    radius: 10,
     locale: 'en_GB',
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -534,7 +534,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [55.953252, -3.188267],
-    radius: 20,
+    radius: 10,
     locale: 'en_GB',
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -543,7 +543,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [51.454514, -2.58791],
-    radius: 15,
+    radius: 10,
     locale: 'en_GB',
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -552,7 +552,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [53.40454, -2.16162],
-    radius: 20,
+    radius: 10,
     locale: 'en_GB',
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -561,7 +561,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [55.864237, -4.251806],
-    radius: 20,
+    radius: 10,
     locale: 'en_GB',
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -572,7 +572,7 @@ export const populationCenters: PopulationCenter[] = [
   // 爱尔兰
   {
     origin: [53.349805, -6.26031],
-    radius: 25,
+    radius: 10,
     locale: 'en_IE',
     country: 'Ireland',
     countryCode: 'IE',
@@ -581,7 +581,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [51.896893, -8.486316],
-    radius: 15,
+    radius: 10,
     locale: 'en_IE',
     country: 'Ireland',
     countryCode: 'IE',
@@ -592,7 +592,7 @@ export const populationCenters: PopulationCenter[] = [
   // 法国 - 缩小范围，增加城市
   {
     origin: [48.856613, 2.352222],
-    radius: 35,
+    radius: 10,
     locale: 'fr',
     country: 'France',
     countryCode: 'FR',
@@ -601,7 +601,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [45.764043, 4.835659],
-    radius: 25,
+    radius: 10,
     locale: 'fr',
     country: 'France',
     countryCode: 'FR',
@@ -610,7 +610,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [43.296482, 5.36978],
-    radius: 25,
+    radius: 10,
     locale: 'fr',
     country: 'France',
     countryCode: 'FR',
@@ -619,7 +619,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [47.218371, -1.553621],
-    radius: 20,
+    radius: 10,
     locale: 'fr',
     country: 'France',
     countryCode: 'FR',
@@ -628,7 +628,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [43.604652, 1.444209],
-    radius: 20,
+    radius: 10,
     locale: 'fr',
     country: 'France',
     countryCode: 'FR',
@@ -637,7 +637,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [43.710173, 7.261953],
-    radius: 15,
+    radius: 10,
     locale: 'fr',
     country: 'France',
     countryCode: 'FR',
@@ -648,7 +648,7 @@ export const populationCenters: PopulationCenter[] = [
   // 比利时
   {
     origin: [50.8503, 4.3517],
-    radius: 20,
+    radius: 10,
     locale: 'fr_BE',
     country: 'Belgium',
     countryCode: 'BE',
@@ -657,7 +657,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [51.2194, 4.4025],
-    radius: 15,
+    radius: 10,
     locale: 'nl_BE',
     country: 'Belgium',
     countryCode: 'BE',
@@ -668,7 +668,7 @@ export const populationCenters: PopulationCenter[] = [
   // 瑞士
   {
     origin: [46.947974, 7.447447],
-    radius: 15,
+    radius: 10,
     locale: 'de_CH',
     country: 'Switzerland',
     countryCode: 'CH',
@@ -677,7 +677,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [47.376887, 8.541694],
-    radius: 15,
+    radius: 10,
     locale: 'de_CH',
     country: 'Switzerland',
     countryCode: 'CH',
@@ -686,7 +686,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [46.204391, 6.143158],
-    radius: 15,
+    radius: 10,
     locale: 'fr_CH',
     country: 'Switzerland',
     countryCode: 'CH',
@@ -697,7 +697,7 @@ export const populationCenters: PopulationCenter[] = [
   // 德国 - 缩小范围，增加城市
   {
     origin: [52.520008, 13.404954],
-    radius: 35,
+    radius: 10,
     locale: 'de',
     country: 'Germany',
     countryCode: 'DE',
@@ -706,7 +706,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [48.135125, 11.581981],
-    radius: 30,
+    radius: 10,
     locale: 'de',
     country: 'Germany',
     countryCode: 'DE',
@@ -715,7 +715,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [50.110924, 8.682127],
-    radius: 25,
+    radius: 10,
     locale: 'de',
     country: 'Germany',
     countryCode: 'DE',
@@ -724,7 +724,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [53.551086, 9.993682],
-    radius: 25,
+    radius: 10,
     locale: 'de',
     country: 'Germany',
     countryCode: 'DE',
@@ -733,7 +733,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [51.227741, 6.773456],
-    radius: 20,
+    radius: 10,
     locale: 'de',
     country: 'Germany',
     countryCode: 'DE',
@@ -742,7 +742,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [50.937531, 6.960279],
-    radius: 20,
+    radius: 10,
     locale: 'de',
     country: 'Germany',
     countryCode: 'DE',
@@ -751,7 +751,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [48.783195, 9.180769],
-    radius: 20,
+    radius: 10,
     locale: 'de',
     country: 'Germany',
     countryCode: 'DE',
@@ -762,7 +762,7 @@ export const populationCenters: PopulationCenter[] = [
   // 奥地利
   {
     origin: [48.208176, 16.373819],
-    radius: 25,
+    radius: 10,
     locale: 'de_AT',
     country: 'Austria',
     countryCode: 'AT',
@@ -771,7 +771,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [47.269212, 11.404102],
-    radius: 15,
+    radius: 10,
     locale: 'de_AT',
     country: 'Austria',
     countryCode: 'AT',
@@ -782,7 +782,7 @@ export const populationCenters: PopulationCenter[] = [
   // 荷兰
   {
     origin: [52.370216, 4.895168],
-    radius: 20,
+    radius: 10,
     locale: 'nl',
     country: 'Netherlands',
     countryCode: 'NL',
@@ -791,7 +791,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [52.092876, 5.10448],
-    radius: 15,
+    radius: 10,
     locale: 'nl',
     country: 'Netherlands',
     countryCode: 'NL',
@@ -800,7 +800,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [51.441642, 5.469722],
-    radius: 15,
+    radius: 10,
     locale: 'nl',
     country: 'Netherlands',
     countryCode: 'NL',
@@ -811,7 +811,7 @@ export const populationCenters: PopulationCenter[] = [
   // 意大利
   {
     origin: [41.902783, 12.496366],
-    radius: 30,
+    radius: 10,
     locale: 'it',
     country: 'Italy',
     countryCode: 'IT',
@@ -820,7 +820,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [45.464204, 9.189982],
-    radius: 25,
+    radius: 10,
     locale: 'it',
     country: 'Italy',
     countryCode: 'IT',
@@ -829,7 +829,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [40.851775, 14.268124],
-    radius: 20,
+    radius: 10,
     locale: 'it',
     country: 'Italy',
     countryCode: 'IT',
@@ -838,7 +838,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [45.440847, 12.315515],
-    radius: 15,
+    radius: 10,
     locale: 'it',
     country: 'Italy',
     countryCode: 'IT',
@@ -847,7 +847,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [43.76956, 11.255814],
-    radius: 15,
+    radius: 10,
     locale: 'it',
     country: 'Italy',
     countryCode: 'IT',
@@ -858,7 +858,7 @@ export const populationCenters: PopulationCenter[] = [
   // 西班牙
   {
     origin: [40.416775, -3.70379],
-    radius: 30,
+    radius: 10,
     locale: 'es',
     country: 'Spain',
     countryCode: 'ES',
@@ -867,7 +867,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [41.385064, 2.173403],
-    radius: 25,
+    radius: 10,
     locale: 'es',
     country: 'Spain',
     countryCode: 'ES',
@@ -876,7 +876,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [37.389092, -5.984459],
-    radius: 20,
+    radius: 10,
     locale: 'es',
     country: 'Spain',
     countryCode: 'ES',
@@ -885,7 +885,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [39.469907, -0.376288],
-    radius: 20,
+    radius: 10,
     locale: 'es',
     country: 'Spain',
     countryCode: 'ES',
@@ -896,7 +896,7 @@ export const populationCenters: PopulationCenter[] = [
   // 葡萄牙
   {
     origin: [38.722252, -9.139337],
-    radius: 25,
+    radius: 10,
     locale: 'pt_PT',
     country: 'Portugal',
     countryCode: 'PT',
@@ -905,7 +905,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [41.157944, -8.629105],
-    radius: 20,
+    radius: 10,
     locale: 'pt_PT',
     country: 'Portugal',
     countryCode: 'PT',
@@ -916,7 +916,7 @@ export const populationCenters: PopulationCenter[] = [
   // 墨西哥
   {
     origin: [19.432608, -99.133208],
-    radius: 35,
+    radius: 10,
     locale: 'es_MX',
     country: 'Mexico',
     countryCode: 'MX',
@@ -925,7 +925,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [20.659698, -103.349609],
-    radius: 25,
+    radius: 10,
     locale: 'es_MX',
     country: 'Mexico',
     countryCode: 'MX',
@@ -934,7 +934,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [25.686614, -100.316113],
-    radius: 20,
+    radius: 10,
     locale: 'es_MX',
     country: 'Mexico',
     countryCode: 'MX',
@@ -945,7 +945,7 @@ export const populationCenters: PopulationCenter[] = [
   // 巴西
   {
     origin: [-23.55052, -46.633308],
-    radius: 35,
+    radius: 10,
     locale: 'pt_BR',
     country: 'Brazil',
     countryCode: 'BR',
@@ -954,7 +954,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-22.906847, -43.172897],
-    radius: 30,
+    radius: 10,
     locale: 'pt_BR',
     country: 'Brazil',
     countryCode: 'BR',
@@ -963,7 +963,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-15.826691, -47.921822],
-    radius: 25,
+    radius: 10,
     locale: 'pt_BR',
     country: 'Brazil',
     countryCode: 'BR',
@@ -972,7 +972,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-12.971599, -38.501187],
-    radius: 20,
+    radius: 10,
     locale: 'pt_BR',
     country: 'Brazil',
     countryCode: 'BR',
@@ -983,7 +983,7 @@ export const populationCenters: PopulationCenter[] = [
   // 阿根廷
   {
     origin: [-34.603684, -58.381559],
-    radius: 30,
+    radius: 10,
     locale: 'es',
     country: 'Argentina',
     countryCode: 'AR',
@@ -992,7 +992,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-31.420083, -64.188776],
-    radius: 20,
+    radius: 10,
     locale: 'es',
     country: 'Argentina',
     countryCode: 'AR',
@@ -1003,7 +1003,7 @@ export const populationCenters: PopulationCenter[] = [
   // 印度
   {
     origin: [28.613939, 77.209023],
-    radius: 35,
+    radius: 10,
     locale: 'en_IN',
     country: 'India',
     countryCode: 'IN',
@@ -1012,7 +1012,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [19.075983, 72.877655],
-    radius: 30,
+    radius: 10,
     locale: 'en_IN',
     country: 'India',
     countryCode: 'IN',
@@ -1021,7 +1021,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [12.971599, 77.594563],
-    radius: 25,
+    radius: 10,
     locale: 'en_IN',
     country: 'India',
     countryCode: 'IN',
@@ -1030,7 +1030,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [13.08268, 80.270718],
-    radius: 25,
+    radius: 10,
     locale: 'en_IN',
     country: 'India',
     countryCode: 'IN',
@@ -1039,7 +1039,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [22.572646, 88.363895],
-    radius: 25,
+    radius: 10,
     locale: 'en_IN',
     country: 'India',
     countryCode: 'IN',
@@ -1050,7 +1050,7 @@ export const populationCenters: PopulationCenter[] = [
   // 南非
   {
     origin: [-33.924869, 18.424055],
-    radius: 30,
+    radius: 10,
     locale: 'en_ZA',
     country: 'South Africa',
     countryCode: 'ZA',
@@ -1059,7 +1059,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-26.244156, 28.04223],
-    radius: 30,
+    radius: 10,
     locale: 'en_ZA',
     country: 'South Africa',
     countryCode: 'ZA',
@@ -1068,7 +1068,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-29.859085, 31.021194],
-    radius: 20,
+    radius: 10,
     locale: 'en_ZA',
     country: 'South Africa',
     countryCode: 'ZA',
@@ -1079,7 +1079,7 @@ export const populationCenters: PopulationCenter[] = [
   // 俄罗斯
   {
     origin: [55.755825, 37.617298],
-    radius: 35,
+    radius: 10,
     locale: 'ru',
     country: 'Russia',
     countryCode: 'RU',
@@ -1088,7 +1088,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [59.931244, 30.335088],
-    radius: 30,
+    radius: 10,
     locale: 'ru',
     country: 'Russia',
     countryCode: 'RU',
@@ -1097,7 +1097,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [56.326944, 44.006516],
-    radius: 20,
+    radius: 10,
     locale: 'ru',
     country: 'Russia',
     countryCode: 'RU',
@@ -1108,7 +1108,7 @@ export const populationCenters: PopulationCenter[] = [
   // 乌克兰
   {
     origin: [50.4501, 30.5234],
-    radius: 25,
+    radius: 10,
     locale: 'uk',
     country: 'Ukraine',
     countryCode: 'UA',
@@ -1117,7 +1117,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [49.9935, 36.2304],
-    radius: 20,
+    radius: 10,
     locale: 'uk',
     country: 'Ukraine',
     countryCode: 'UA',
@@ -1128,7 +1128,7 @@ export const populationCenters: PopulationCenter[] = [
   // 波兰
   {
     origin: [52.229676, 21.012229],
-    radius: 25,
+    radius: 10,
     locale: 'pl',
     country: 'Poland',
     countryCode: 'PL',
@@ -1137,7 +1137,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [50.064192, 19.944981],
-    radius: 20,
+    radius: 10,
     locale: 'pl',
     country: 'Poland',
     countryCode: 'PL',
@@ -1146,7 +1146,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [54.372158, 18.638306],
-    radius: 15,
+    radius: 10,
     locale: 'pl',
     country: 'Poland',
     countryCode: 'PL',
@@ -1157,7 +1157,7 @@ export const populationCenters: PopulationCenter[] = [
   // 捷克
   {
     origin: [50.075538, 14.4378],
-    radius: 20,
+    radius: 10,
     locale: 'cs_CZ',
     country: 'Czech Republic',
     countryCode: 'CZ',
@@ -1166,7 +1166,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [49.195061, 16.606837],
-    radius: 15,
+    radius: 10,
     locale: 'cs_CZ',
     country: 'Czech Republic',
     countryCode: 'CZ',
@@ -1177,7 +1177,7 @@ export const populationCenters: PopulationCenter[] = [
   // 匈牙利
   {
     origin: [47.497912, 19.040235],
-    radius: 20,
+    radius: 10,
     locale: 'hu',
     country: 'Hungary',
     countryCode: 'HU',
@@ -1188,7 +1188,7 @@ export const populationCenters: PopulationCenter[] = [
   // 罗马尼亚
   {
     origin: [44.426767, 26.102538],
-    radius: 25,
+    radius: 10,
     locale: 'ro',
     country: 'Romania',
     countryCode: 'RO',
@@ -1197,7 +1197,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [46.770439, 23.591423],
-    radius: 15,
+    radius: 10,
     locale: 'ro',
     country: 'Romania',
     countryCode: 'RO',
@@ -1208,7 +1208,7 @@ export const populationCenters: PopulationCenter[] = [
   // 斯洛伐克
   {
     origin: [48.148596, 17.107748],
-    radius: 15,
+    radius: 10,
     locale: 'sk',
     country: 'Slovakia',
     countryCode: 'SK',
@@ -1219,7 +1219,7 @@ export const populationCenters: PopulationCenter[] = [
   // 克罗地亚
   {
     origin: [45.815011, 15.981919],
-    radius: 15,
+    radius: 10,
     locale: 'hr',
     country: 'Croatia',
     countryCode: 'HR',
@@ -1230,7 +1230,7 @@ export const populationCenters: PopulationCenter[] = [
   // 挪威
   {
     origin: [59.913869, 10.752245],
-    radius: 20,
+    radius: 10,
     locale: 'nb_NO',
     country: 'Norway',
     countryCode: 'NO',
@@ -1239,7 +1239,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [60.391263, 5.322054],
-    radius: 15,
+    radius: 10,
     locale: 'nb_NO',
     country: 'Norway',
     countryCode: 'NO',
@@ -1250,7 +1250,7 @@ export const populationCenters: PopulationCenter[] = [
   // 瑞典
   {
     origin: [59.329323, 18.068581],
-    radius: 20,
+    radius: 10,
     locale: 'sv',
     country: 'Sweden',
     countryCode: 'SE',
@@ -1259,7 +1259,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [57.70887, 11.97456],
-    radius: 15,
+    radius: 10,
     locale: 'sv',
     country: 'Sweden',
     countryCode: 'SE',
@@ -1270,7 +1270,7 @@ export const populationCenters: PopulationCenter[] = [
   // 丹麦
   {
     origin: [55.676097, 12.568337],
-    radius: 20,
+    radius: 10,
     locale: 'da',
     country: 'Denmark',
     countryCode: 'DK',
@@ -1279,7 +1279,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [56.162939, 10.203921],
-    radius: 15,
+    radius: 10,
     locale: 'da',
     country: 'Denmark',
     countryCode: 'DK',
@@ -1290,7 +1290,7 @@ export const populationCenters: PopulationCenter[] = [
   // 芬兰
   {
     origin: [60.169856, 24.938379],
-    radius: 20,
+    radius: 10,
     locale: 'fi',
     country: 'Finland',
     countryCode: 'FI',
@@ -1299,7 +1299,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [61.497752, 23.760954],
-    radius: 15,
+    radius: 10,
     locale: 'fi',
     country: 'Finland',
     countryCode: 'FI',
@@ -1310,7 +1310,7 @@ export const populationCenters: PopulationCenter[] = [
   // 希腊
   {
     origin: [37.975334, 23.734151],
-    radius: 25,
+    radius: 10,
     locale: 'el',
     country: 'Greece',
     countryCode: 'GR',
@@ -1319,7 +1319,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [40.640063, 22.944419],
-    radius: 15,
+    radius: 10,
     locale: 'el',
     country: 'Greece',
     countryCode: 'GR',
@@ -1330,7 +1330,7 @@ export const populationCenters: PopulationCenter[] = [
   // 土耳其
   {
     origin: [41.008238, 28.978359],
-    radius: 30,
+    radius: 10,
     locale: 'tr',
     country: 'Turkey',
     countryCode: 'TR',
@@ -1339,7 +1339,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [39.933364, 32.859742],
-    radius: 25,
+    radius: 10,
     locale: 'tr',
     country: 'Turkey',
     countryCode: 'TR',
@@ -1348,7 +1348,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [38.423734, 27.142826],
-    radius: 15,
+    radius: 10,
     locale: 'tr',
     country: 'Turkey',
     countryCode: 'TR',
@@ -1359,7 +1359,7 @@ export const populationCenters: PopulationCenter[] = [
   // 以色列
   {
     origin: [31.771959, 35.217018],
-    radius: 15,
+    radius: 10,
     locale: 'he',
     country: 'Israel',
     countryCode: 'IL',
@@ -1368,7 +1368,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [32.109333, 34.855499],
-    radius: 15,
+    radius: 10,
     locale: 'he',
     country: 'Israel',
     countryCode: 'IL',
@@ -1379,7 +1379,7 @@ export const populationCenters: PopulationCenter[] = [
   // 阿联酋
   {
     origin: [25.204849, 55.270783],
-    radius: 20,
+    radius: 10,
     locale: 'ar',
     country: 'United Arab Emirates',
     countryCode: 'AE',
@@ -1388,7 +1388,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [24.453884, 54.377344],
-    radius: 15,
+    radius: 10,
     locale: 'ar',
     country: 'United Arab Emirates',
     countryCode: 'AE',
@@ -1399,7 +1399,7 @@ export const populationCenters: PopulationCenter[] = [
   // 沙特阿拉伯
   {
     origin: [24.774265, 46.738586],
-    radius: 25,
+    radius: 10,
     locale: 'ar',
     country: 'Saudi Arabia',
     countryCode: 'SA',
@@ -1408,7 +1408,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [21.485811, 39.192505],
-    radius: 20,
+    radius: 10,
     locale: 'ar',
     country: 'Saudi Arabia',
     countryCode: 'SA',
@@ -1419,7 +1419,7 @@ export const populationCenters: PopulationCenter[] = [
   // 伊朗
   {
     origin: [35.689197, 51.388974],
-    radius: 30,
+    radius: 10,
     locale: 'fa',
     country: 'Iran',
     countryCode: 'IR',
@@ -1428,7 +1428,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [29.630771, 52.516766],
-    radius: 20,
+    radius: 10,
     locale: 'fa',
     country: 'Iran',
     countryCode: 'IR',
@@ -1439,7 +1439,7 @@ export const populationCenters: PopulationCenter[] = [
   // 泰国
   {
     origin: [13.756331, 100.501765],
-    radius: 30,
+    radius: 10,
     locale: 'th',
     country: 'Thailand',
     countryCode: 'TH',
@@ -1448,7 +1448,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [18.788132, 98.985107],
-    radius: 15,
+    radius: 10,
     locale: 'th',
     country: 'Thailand',
     countryCode: 'TH',
@@ -1459,7 +1459,7 @@ export const populationCenters: PopulationCenter[] = [
   // 越南
   {
     origin: [21.028511, 105.804817],
-    radius: 25,
+    radius: 10,
     locale: 'vi',
     country: 'Vietnam',
     countryCode: 'VN',
@@ -1468,7 +1468,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [10.823099, 106.629664],
-    radius: 25,
+    radius: 10,
     locale: 'vi',
     country: 'Vietnam',
     countryCode: 'VN',
@@ -1479,7 +1479,7 @@ export const populationCenters: PopulationCenter[] = [
   // 印度尼西亚
   {
     origin: [-6.208763, 106.845599],
-    radius: 30,
+    radius: 10,
     locale: 'id_ID',
     country: 'Indonesia',
     countryCode: 'ID',
@@ -1488,7 +1488,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-7.797068, 110.370529],
-    radius: 20,
+    radius: 10,
     locale: 'id_ID',
     country: 'Indonesia',
     countryCode: 'ID',
@@ -1499,7 +1499,7 @@ export const populationCenters: PopulationCenter[] = [
   // 马来西亚
   {
     origin: [3.139003, 101.686855],
-    radius: 25,
+    radius: 10,
     locale: 'en_US',
     country: 'Malaysia',
     countryCode: 'MY',
@@ -1508,7 +1508,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [5.414184, 100.329114],
-    radius: 15,
+    radius: 10,
     locale: 'en_US',
     country: 'Malaysia',
     countryCode: 'MY',
@@ -1519,7 +1519,7 @@ export const populationCenters: PopulationCenter[] = [
   // 菲律宾
   {
     origin: [14.599512, 120.984219],
-    radius: 30,
+    radius: 10,
     locale: 'en_US',
     country: 'Philippines',
     countryCode: 'PH',
@@ -1528,7 +1528,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [10.315699, 123.885437],
-    radius: 15,
+    radius: 10,
     locale: 'en_US',
     country: 'Philippines',
     countryCode: 'PH',
@@ -1539,7 +1539,7 @@ export const populationCenters: PopulationCenter[] = [
   // 新西兰
   {
     origin: [-36.848461, 174.762188],
-    radius: 20,
+    radius: 10,
     locale: 'en_AU',
     country: 'New Zealand',
     countryCode: 'NZ',
@@ -1548,7 +1548,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [-41.288889, 174.777222],
-    radius: 15,
+    radius: 10,
     locale: 'en_AU',
     country: 'New Zealand',
     countryCode: 'NZ',
@@ -1559,7 +1559,7 @@ export const populationCenters: PopulationCenter[] = [
   // 阿塞拜疆
   {
     origin: [40.409264, 49.867092],
-    radius: 20,
+    radius: 10,
     locale: 'az',
     country: 'Azerbaijan',
     countryCode: 'AZ',
@@ -1570,7 +1570,7 @@ export const populationCenters: PopulationCenter[] = [
   // 加纳
   {
     origin: [5.603717, -0.186964],
-    radius: 20,
+    radius: 10,
     locale: 'en_GH',
     country: 'Ghana',
     countryCode: 'GH',
@@ -1579,7 +1579,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [6.688437, -1.609286],
-    radius: 15,
+    radius: 10,
     locale: 'en_GH',
     country: 'Ghana',
     countryCode: 'GH',
@@ -1590,7 +1590,7 @@ export const populationCenters: PopulationCenter[] = [
   // 尼日利亚
   {
     origin: [9.072264, 7.491302],
-    radius: 25,
+    radius: 10,
     locale: 'en_NG',
     country: 'Nigeria',
     countryCode: 'NG',
@@ -1599,7 +1599,7 @@ export const populationCenters: PopulationCenter[] = [
   },
   {
     origin: [6.524379, 3.379206],
-    radius: 25,
+    radius: 10,
     locale: 'en_NG',
     country: 'Nigeria',
     countryCode: 'NG',

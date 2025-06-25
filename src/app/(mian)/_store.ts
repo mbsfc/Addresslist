@@ -9,6 +9,8 @@ interface StoreState {
   coord: [number, number];
   country_code: string; // 可选属性，可能用于存储国家代码
   loadingAddress: boolean; // 是否正在加载地址信息
+  hideMapTips: boolean; // 是否显示提示信息
+  setHideMapTips: (show: boolean) => void;
   setCountryCode: (code: string) => void;
   setCoord: (coord: [number, number]) => void;
   setUser: (user: IUser.asObject) => void;
@@ -27,6 +29,8 @@ export const useStore = create<StoreState>()(
       userHistory: [],
       loadingAddress: false,
       isHistoryDrawerOpen: false,
+      hideMapTips: false,
+      setHideMapTips: (show: boolean) => set({ hideMapTips: show }),
       setLoadingAddress: (loading: boolean) => set({ loadingAddress: loading }),
       setCountryCode: (code: string) => set({ country_code: code }),
       setCoord: (coord: [number, number]) => set({ coord }),
@@ -42,7 +46,7 @@ export const useStore = create<StoreState>()(
           (historyUser) => historyUser.email === user.email
         );
         if (!isDuplicate) {
-          const newHistory = [user, ...currentHistory].slice(0, 20); // 只保留最近20条记录
+          const newHistory = [user, ...currentHistory]; // 只保留最近20条记录
           set({ userHistory: newHistory });
         }
       },

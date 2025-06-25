@@ -49,8 +49,13 @@ export default function RootLayout({
           content="#000000"
           media="(prefers-color-scheme: dark)"
         />
-        <title>一个野生的地址生成器</title>
+        <title>{pkg.title}</title>
         <meta name="description" content={pkg.description} />
+        <meta name="keywords" content={pkg.keywords.toString()} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={pkg.site} />
+
         <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"

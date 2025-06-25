@@ -90,7 +90,7 @@ const HistoryDrawer: React.FC = () => {
             {userHistory.map((user, index) => (
               <Card
                 key={`${user.email}-${index}`}
-                className="p-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border-l-4 border-l-blue-500"
+                className="p-3 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border-l-4 border-l-black-500"
                 onClick={() => handleSelectUser(user)}
               >
                 <div className="flex items-start gap-3">

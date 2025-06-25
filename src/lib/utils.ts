@@ -191,8 +191,11 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function getRandomCoor() {
-  const center = faker.helpers.arrayElement(populationCenters);
+export function getRandomCoor(countryCode?: string) {
+  const countrys = populationCenters.filter((center) =>
+    countryCode ? center.countryCode === countryCode : true
+  );
+  const center = faker.helpers.arrayElement(countrys);
   const coordinates = faker.location.nearbyGPSCoordinate({
     isMetric: true,
     origin: center.origin,
@@ -228,9 +231,7 @@ export function generateStrongPassword(length = 16): string {
 }
 
 export function getPerson(country_code: string): IUser.asObject {
-  console.log('获取用户信息，国家代码:', country_code);
   const localFaker = getLocaleFaker(country_code);
-  console.log(localFaker);
   return {
     firstname: localFaker.person.firstName(),
     lastname: localFaker.person.lastName(),
