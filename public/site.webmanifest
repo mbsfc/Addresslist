@@ -1,6 +1,6 @@
 {
-  "name": "App",
-  "short_name": "App",
+  "name": "一个野生的地址生成器",
+  "short_name": "野生的地址",
   "icons": [
     {
       "src": "/pwa-192x192.png",
@@ -29,6 +29,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF"
+  "background_color": "#000",
+  "theme_color": "#000"
 }

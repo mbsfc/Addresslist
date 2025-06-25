@@ -1,13 +1,11 @@
 
 # 项目名称
-name = "yesheng-address-generator"
+name = "us-address-generator"
 
 # 兼容性日期
 compatibility_date = "2025-06-25"
 
-# Pages 的构建配置
-[pages_build]
-# 构建命令
-command = "pnpm run build"
-# 构建产物的输出目录
-dir = "dist"
+
+
+[assets]
+directory = "./dist"
