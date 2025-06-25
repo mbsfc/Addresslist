@@ -130,8 +130,8 @@ export default function ShareDialog({ children }: ShareDialogProps) {
               <QRCodeCanvas
                 id="qr-canvas"
                 value={shareUrl}
-                size={isMobile ? 180 : 200}
-                level="H"
+                size={isMobile ? 180 : 256}
+                level="L"
                 bgColor="#ffffff"
                 fgColor="#000000"
                 className=""
