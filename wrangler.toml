@@ -1,15 +1,8 @@
-
-name = "address-generator"
+name = "野生的地址生成器"
 compatibility_date = "2024-06-25"
 
 [build]
 command = "npm run build"
-cwd = "."
-watch_dir = "."
 
 [site]
 bucket = "./dist"
-entry-point = "."
-
-[deploy]
-
