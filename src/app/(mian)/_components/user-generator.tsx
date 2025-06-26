@@ -178,7 +178,7 @@ export default function UserGenerator() {
                         copyToClipboard(userInfo?.display_name, '完整地址')
                       }
                       title="点击复制完整地址"
-                      className="underline-hover"
+                      className="underline-hover break-all"
                     >
                       {userInfo?.address.country},{userInfo?.address.state},
                       {userInfo?.address.city},{userInfo?.address.streetName},
