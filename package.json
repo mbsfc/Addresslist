@@ -1,6 +1,6 @@
 {
   "name": "address-generator-fe",
-  "title": "野生的地址生成器",
+  "title": "临时地址生成器",
   "description": "基于google地图生成真实格式的测试地址数据，包含街道、城市、省州、邮编、电话等字段，适用于全球多个国家，开发测试必备。",
   "keywords": [
     "地址生成器",
@@ -20,7 +20,7 @@
     "Next.js",
     "React"
   ],
-  "site": "https://address.yesheng.de",
+  "site": "https://addr.800108.xyz",
   "author": {
     "name": "i<i@github.com>"
   },
